@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Propery Buys And Sales</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<script type="text/javascript">
+		/* close button */
+		function openSideMenu() {
+			 document.getElementById('side-menu').style.width = '250px';
+			 document.getElementById('main').style.margineLeft = '250px'; 
+			}
+		function closeSideMenu() {
+			 document.getElementById('side-menu').style.width = '0';
+			 document.getElementById('main').style.margineLeft = '0'; 
+			}
+		</script>
+		
+	<header class="header"><h1>Online Property Buys And Sellls</h1></header>
+		<nav class="nav">
+			<span class="sidebar">
+				<a href="#" onclick="openSideMenu()">
+					<svg width="30" height="40">
+						<path d="M0,10 30,10" stroke="#000" stroke-width="5"/>
+						<path d="M0,20 30,20" stroke="#000" stroke-width="5"/>
+						<path d="M0,30 30,30" stroke="#000" stroke-width="5"/>
+					</svg>
+				</a>    
+			</span>
+			<ul class="ul">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="login.html">LOGIN</a></li>
+				<li><a href="signup.html">SIGN UP</a></li>
+				<li><a href="buyproperty.html">Buy Property</a></li>
+				<li><a href="sellproperty.html">Sell Property</a></li>
+			</ul>
+			
+		</nav>
+		<hr>
+		<div id="side-menu" class="side-nav">
+				<a href="" class="close" onclick="closeSideMenu()">&times;</a>
+				<a href="report.html">All Property</a>
+				<a href="report.html">Sold Property</a>
+				<a href="report.html">Unsold Property</a>
+		</div>
+	<div id="main">	
+	<aside class="asidev">
+		<video controls src="video.mp4" class="video"></video>
+	<hr>
+	<div class="container" id="container" >
+			
+			<div class="item" id="1">
+				<img src="image/1.png" height="30%" width="100%">
+				<strong class="name">Raj Mahal</strong><hr>
+				<a class="location">Location - Valsad</a><br>
+				<span class="price">Price - 5000000/-</span><br>
+				<span class="seller">Seller - Paras </span><br>
+				 
+			</div>
+			<div class="item" id="2">
+				<img src="image/2.png" height="30%" width="100%">
+				<strong class="name">Mannat</strong><hr>
+				<a class="location">Location - Surat</a><br>
+				<span class="price">Price - 9000000/-</span><br>
+				<span class="seller">Seller - Sahrukh </span><br>
+				 
+			</div>
+			<div class="item" id="3">
+				<img src="image/3.png" height="30%" width="100%">
+				<strong class="name">Dhup Mahal</strong><hr>
+				<a class="location">Location - Vadodara</a><br>
+				<span class="price">Price - 3000000/-</span><br>
+				<span class="seller">Seller - Chetan </span><br>
+				 
+			</div>
+			<div class="item" id="4">
+				<img src="image/4.png" height="30%" width="100%">
+				<strong class="name">Hava Mahal</strong><hr>
+				<a class="location">Location - Ahemdabad</a><br>
+				<span class="price">Price - 7000000/-</span><br>
+				<span class="seller">Seller - Ritesh </span><br>
+				 
+			</div>
+			<div class="item" id="5">
+				<img src="image/5.png" height="30%" width="100%">
+				<strong class="name">Matru chhaya</strong><hr>
+				<a class="location">Location - Kutch</a><br>
+				<span class="price">Price - 4000000/-</span><br>
+				<span class="seller">Seller - Seema </span><br>
+				 
+			</div>
+			<div class="item" id="6">
+				<img src="image/6.png" height="30%" width="100%">
+				<strong class="name">Pitru chhaya</strong><hr>
+				<a class="location">Location - Rajkot</a><br>
+				<span class="price">Price - 4000000/-</span><br>
+				<span class="seller">Seller - Manoj </span><br>
+				 
+			</div>
+			<div class="item" id="7">
+				<img src="image/7.png" height="30%" width="100%">
+				<strong class="name">Alayam</strong><hr>
+				<a class="location">Location - Goa</a><br>
+				<span class="price">Price - 17500000/-</span><br>
+				<span class="seller">Seller - Pooja </span><br>
+				 
+			</div>
+			<div class="item" id="8">
+				<img src="image/8.png" height="30%" width="100%">
+				<strong class="name">Ambar</strong><hr>
+				<a class="location">Location - Rajasthan</a><br>
+				<span class="price">Price - 3500000/-</span><br>
+				<span class="seller">Seller - Sukhadev </span><br>
+				 
+			</div>
+			<div class="item" id="9">
+				<img src="image/9.png" height="30%" width="100%">
+				<strong class="name">Taj Mahal</strong><hr>
+				<a class="location">Location - Agra</a><br>
+				<span class="price">Price - 100000000/-</span><br>
+				<span class="seller">Seller - Sahajaha </span><br>
+				 
+			</div>
+			<div class="item" id="10">
+				<img src="image/10.png" height="30%" width="100%">
+				<strong class="name">Swarana</strong><hr>
+				<a class="location">Location - M.P.</a><br>
+				<span class="price">Price - 8500000/-</span><br>
+				<span class="seller">Seller - Krunal </span><br>
+				 
+			</div>
+			<div class="item" id="11">
+				<img src="image/11.png" height="30%" width="100%">
+				<strong class="name">Suraj Prakash</strong><hr>
+				<a class="location">Location - Delhi</a><br>
+				<span class="price">Price - 5500000/-</span><br>
+				<span class="seller">Seller - Kiran </span><br>
+				 
+			</div>
+			<div class="item" id="12">
+				<img src="image/12.png" height="30%" width="100%">
+				<strong class="name">Sai Darshan</strong><hr>
+				<a class="location">Location - asam</a><br>
+				<span class="price">Price - 2500000/-</span><br>
+				<span class="seller">Seller - Krushit </span><br>
+				 
+			</div>
+			
+			
+		
+		</div>
+		
+
+	</aside>
+	</div>
+	<hr>
+	<footer id="footer">
+		<div class="info">
+			<h3 style="color: #8e94d1;">Info</h3>
+			<b>Paras Manojbhai Patel.</b><br>
+			<i>U17CO008</i><br>
+			<strong>CONTACT - 9737611811</strong><br><br>
+
+			<b>Ashok </b><br>
+			<i>U17CO0011</i><br>
+			<strong>CONTACT - 8866141241</strong><br>
+		</div>
+		<hr>
+		<strong style="color: #e8491d;">ALL RIGHTS RESERVED &copy; 2018.</strong>
+	</footer>
+	<hr>
+	
+
+</body>
+</html>

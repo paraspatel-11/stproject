@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sell Property</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript">
+		/* close button */
+		function openSideMenu() {
+			 document.getElementById('side-menu').style.width = '250px';
+			 document.getElementById('main').style.margineLeft = '250px'; 
+			}
+		function closeSideMenu() {
+			 document.getElementById('side-menu').style.width = '0';
+			 document.getElementById('main').style.margineLeft = '0'; 
+			}
+        </script>
+	<script type="text/javascript" src="sell.js"></script>
+</head>
+<body>
+	
+		
+	<header class="header"><h1>Online Property Buys And Sellls</h1></header>
+		<nav class="nav">
+			<span class="sidebar">
+				<a href="#" onclick="openSideMenu()">
+					<svg width="30" height="40">
+						<path d="M0,10 30,10" stroke="#000" stroke-width="5"/>
+						<path d="M0,20 30,20" stroke="#000" stroke-width="5"/>
+						<path d="M0,30 30,30" stroke="#000" stroke-width="5"/>
+					</svg>
+				</a>    
+			</span>
+			<ul class="ul">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="login.html">LOGIN</a></li>
+				<li><a href="signup.html">SIGN UP</a></li>
+				<li><a href="buyproperty.html">Buy Property</a></li>
+				<li><a href="sellproperty.html">Sell Property</a></li>
+			</ul>
+			
+		</nav>
+		<hr>
+		<div id="side-menu" class="side-nav">
+				<a href="" class="close" onclick="closeSideMenu()">&times;</a>
+				<a href="report.html">Property Report</a>
+				<a href="report.html">Sold Property</a>
+				<a href="report.html">Unsold Property</a>
+								
+		</div>
+	<div id="main">
+		<form >
+                    <fieldset>
+                        <h1 id="suf">Property Details</h1>
+                        <hr>
+                        <div>
+                            <label for="property-name">Property Name:</label>
+                            <input type="text" name="property-name" placeholder="Name" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="property-location">Location:</label>
+                            <textarea type="text" name="property-location" placeholder="Location" required></textarea>
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="property-price">Price:</label>
+                            <input type="number" name="property-price" placeholder="Price" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="seller-name">Seller:</label>
+                            <input type="text" name="seller-name" placeholder="Seller's Name" required>
+                        </div>                        
+                        <hr>
+                        <div>
+                            <input class="button" type="submit" name="submit-sell" value="Sell Property" onclick="local_sell()">
+                        </div>
+                        <hr>
+                    </fieldset>
+        </form>
+    
+	</div>
+	<hr>
+	<footer id="footer">
+		<div class="info">
+			<h3 style="color: #8e94d1;">Info</h3>
+			<b>Paras Manojbhai Patel.</b><br>
+			<i>U17CO008</i><br>
+			<strong>CONTACT - 9737611811</strong><br><br>
+<b>Ashok </b><br>
+			<i>U17CO0011</i><br>
+			<strong>CONTACT - 8866141241</strong><br>
+		</div>
+		<hr>
+		<strong style="color: #e8491d;">ALL RIGHTS RESERVED &copy; 2018.</strong>
+	</footer>
+	<hr>
+
+
+</body>
+</html>

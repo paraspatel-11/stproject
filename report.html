@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>online propery buys and sales</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="report.js"></script>
+</head>
+<body onload="show_sold(), init()">
+    <script type="text/javascript">
+        /* close button */
+        function openSideMenu() {
+             document.getElementById('side-menu').style.width = '250px';
+             document.getElementById('main').style.margineLeft = '250px'; 
+            }
+        function closeSideMenu() {
+             document.getElementById('side-menu').style.width = '0';
+             document.getElementById('main').style.margineLeft = '0'; 
+            }
+        </script>
+        
+    <header class="header"><h1>Online Property Buys And Sellls</h1></header>
+        <nav class="nav">
+            <span class="sidebar">
+                <a href="#" onclick="openSideMenu()">
+                    <svg width="30" height="40">
+                        <path d="M0,10 30,10" stroke="#000" stroke-width="5"/>
+                        <path d="M0,20 30,20" stroke="#000" stroke-width="5"/>
+                        <path d="M0,30 30,30" stroke="#000" stroke-width="5"/>
+                    </svg>
+                </a>    
+            </span>
+            <ul class="ul">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+                <li><a href="buyproperty.html">Buy Property</a></li>
+                <li><a href="sellproperty.html">Sell Property</a></li>
+            </ul>
+            
+        </nav>
+        <hr>
+        <div id="side-menu" class="side-nav">
+                <a href="" class="close" onclick="closeSideMenu()">&times;</a>
+                <a href="index.html">HOME</a>
+                <a href="login.html">LOGIN</a>
+                <a href="signup.html">SIGN UP</a>
+                <a href="buyproperty.html">Buy Property</a>
+                <a href="sellproperty.html">Sell Property</a>
+        </div>
+        <div id="main">
+            <div id="form">
+                <select onchange="show_report()" style="width: 200px;height: 40px;" id="report-type">
+                    <option value="Sold">Sold Listings</option>
+                    <option value="Unsold">Unsold Listings</option>
+                    <option value="All">All Listings</option>
+                </select>
+            
+            
+                <table class="table" align="center" cellspacing="15px">
+                    <h1 id="suf">Property Buys and Sells Report</h1>
+                    <tbody>
+                        <tr id="1"><td><p>Property ID: 1</p>
+                            <p> Raj Mahal </p>
+                            <p> Location: Valsad</p>
+                            <p>Price: 5000000/-</p>
+                            <p>Seller: Paras</p></td>
+                            <td><input type="submit" name="buy" value="Buy Now" id="buy-1" class="buy-button"  onclick="buy_local(1)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="2"><td><p>Property ID: 2</p>
+                            <p> Mannat</p>
+                            <p> Location: Suart</p>
+                            <p>Price: 9000000/-</p>
+                            <p>Seller: Sahrukh</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-2" class="buy-button"  onclick="buy_local(2)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="3"><td><p>Property ID: 3</p>
+                            <p> Dhup Mahal </p>
+                            <p> Location: VAdodara</p>
+                            <p>Price: 3000000/-</p>
+                            <p>Seller: Chetan</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-3" class="buy-button"  onclick="buy_local(3)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="4"><td><p>Property ID: 4</p>
+                            <p> Hava Mahal </p>
+                            <p> Location: Ahemdabad</p>
+                            <p>Price: 7000000/-</p>
+                            <p>Seller: Ritesh</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-4" class="buy-button"  onclick="buy_local(4)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="5"><td><p>Property ID: 5</p>
+                            <p> Matru Chhaya </p>
+                            <p> Location: Kutch</p>
+                            <p>Price: 4000000/-</p>
+                            <p>Seller: Seema</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-5" class="buy-button"  onclick="buy_local(5)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="6"><td><p>Property ID: 6</p>
+                            <p> Pitru Chhaya </p>
+                            <p> Location: Rajkot</p>
+                            <p>Price: 4000000/-</p>
+                            <p>Seller: Manoj</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-6" class="buy-button"  onclick="buy_local(6)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="7"><td><p>Property ID: 7</p>
+                            <p> Alayam </p>
+                            <p> Location: Goa</p>
+                            <p>Price: 17500000/-</p>
+                            <p>Seller: Pooja</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-7" class="buy-button"  onclick="buy_local(7)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="8"><td><p>Property ID: 8</p>
+                            <p> Ambar </p>
+                            <p> Location: Rajasthan</p>
+                            <p>Price: 3500000/-</p>
+                            <p>Seller: Sukhadev</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-8" class="buy-button"  onclick="buy_local(8)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="9" style="display: none;"><td><p>Property ID: 9</p>
+                            <p id="name9">  Taj Mahal </p>
+                            <p id="loc9"> Location: Agra</p>
+                            <p id="price9">Price: 100000000/-</p>
+                            <p id="sname9">Seller: Sahajaha</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-9" class="buy-button"  onclick="buy_local(9)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="10" style="display: none;"><td><p>Property ID: 10</p>
+                            <p id="name10">  Swarana </p>
+                            <p id="loc10"> Location: M.P.</p>
+                            <p id="price10">Price: 8500000/-</p>
+                            <p id="sname10">Seller: Krunal</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-10" class="buy-button"  onclick="buy_local(10)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="11" style="display: none;"><td><p>Property ID: 11</p>
+                            <p id="name11">  Suraj Prakash </p>
+                            <p id="loc11"> Location: Delhi</p>
+                            <p id="price11">Price: 5500000/-</p>
+                            <p id="sname11">Seller: Kiran</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-11" class="buy-button"  onclick="buy_local(11)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr>
+                        <tr id="12" style="display: none;"><td><p>Property ID: 12</p>
+                            <p id="name12">  Sai Darshan </p>
+                            <p id="loc12"> Location: Asam</p>
+                            <p id="price12">Price: 2500000/-</p>
+                            <p id="sname12">Seller: Krushit</p></td>
+                            </td><td><input type="submit" name="buy" value="Buy Now" id="buy-12" class="buy-button"  onclick="buy_local(12)"><p style="background-color: red; color: white" class="sold-out-tag buy-button"> SOLD!</p></td></tr></tbody>
+                </table>
+            </div></div>
+        </div>
+        <hr>
+    <footer id="footer">
+        <div class="info">
+            <h3 style="color: #8e94d1;">Info</h3>
+            <b>Paras Manojbhai Patel.</b><br>
+            <i>U17CO008</i><br>
+            <strong>CONTACT - 9737611811</strong><br><br>
+<b>Ashok </b><br>
+            <i>U17CO0011</i><br>
+            <strong>CONTACT - 8866141241</strong><br>
+        </div>
+        <hr>
+        <strong style="color: #e8491d;">ALL RIGHTS RESERVED &copy; 2018.</strong>
+    </footer>
+    <hr>
+        </body>
+    </html>
